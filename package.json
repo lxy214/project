@@ -2,7 +2,7 @@
   "name": "youpin",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": ".postcssrc.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "dev": "webpack-dev-server --config webpack.config.js",
@@ -29,9 +29,13 @@
     "css-loader": "4.2.0",
     "element-ui": "2.13.2",
     "html-webpack-plugin": "4.3.0",
+    "less": "3.12.2",
+    "less-loader": "6.2.0",
     "postcss-loader": "3.0.0",
     "style-loader": "1.2.1",
+    "url-loader": "4.1.0",
     "vue-loader": "15.9.3",
-    "vue-router": "3.3.4"
+    "vue-router": "3.3.4",
+    "vue-style-loader": "4.1.2"
   }
 }

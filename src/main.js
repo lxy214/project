@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import router from './pages/routers/router';
 import App from './app.vue';
-import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import ElementUI from 'element-ui';
 import axios from 'axios'
 
 Vue.prototype.$ajax = axios;

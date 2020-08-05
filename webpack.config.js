@@ -17,18 +17,13 @@ module.exports = {
 				loader: 'vue-loader'
 			},
 			{
-				test: /.css$/,
-				use: [
-				  'css-loader',
-				  'style-loader',
-				  {
-					loader: 'postcss-loader',
-					options: {
-					  sourceMap: true //启用源映射支持，postcss-loader将使用其他加载器给出的先前源映射并相应地更新它
-					}
-				  }
-				]
-			  },
+				test: /\.css$/,
+				loader: 'style-loader!css-loader'
+			},
+			{
+				test: /\.(woff|svg|eot|ttf)\??.*$/,
+				loader: 'url-loader'
+			},
 
 		]
 	},
