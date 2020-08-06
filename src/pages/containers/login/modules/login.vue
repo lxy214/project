@@ -1,22 +1,19 @@
 <template>
 	<div>
-		<el-input v-model="userName" placeholder="请输入用户名"></el-input>
-		<el-input v-model="password" placeholder="请输入密码" show-password></el-input>
-		<el-button type="primary">登录</el-button>
+		<login-centent />
 	</div>
 </template>
 
 <script>
-
+import Content from '@components/login/content'
 export default {
 	name: 'login',
 	components: {
-		
+		'login-centent': Content
 	},
 	data() {
 		return {
-			userName: '',
-			password: '',
+			
 
 		};
 	},

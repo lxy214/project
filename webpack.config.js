@@ -10,6 +10,14 @@ module.exports = {
 		filename: 'bundle.js'
 	},
 	mode: 'development', // development 打包开发环境  production 正式环境
+	resolve: {
+		extensions: ['.js', '.vue', '.json', '.scss', '.css'],
+		modules: [path.resolve(APP_ROOT, 'src'), 'node_modules'],
+		alias: {
+			'vue$': 'vue/dist/vue.esm.js',
+			'@components': path.resolve('./src/pages/components'),
+		  }
+	},
 	module: {
 		rules: [
 			{
@@ -24,6 +32,10 @@ module.exports = {
 				test: /\.(woff|svg|eot|ttf)\??.*$/,
 				loader: 'url-loader'
 			},
+			{
+				test: /\.sass$/,
+				loaders: ['style', 'css', 'sass']
+			  }
 
 		]
 	},
